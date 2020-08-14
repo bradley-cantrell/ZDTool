@@ -1,20 +1,9 @@
-
-//Accepts a string and returns any numbers 0-9 as a string, then combines the strings with no spaces:
-
-var url = "https://mailchimp.zendesk.com/agent/tickets/7598235";
-
-const clipped = new RegExp("[0-9]", "g");
-
-const zd = url.match(clipped);
-
-const type = typeof zd;
-console.log(type);
-
-console.log(zd.join(''));
+var urls = "https://mailchimp.zendesk.com/agent/tickets/7602662, https://mailchimp.zendesk.com/agent/tickets/7602662, https://mailchimp.zendesk.com/agent/tickets/7602670, www.google.com";
 
 
-//Adjust to:
-//array of urls
-//regex on each url (for each?)
-//.match clipped on each url
-//return or log zd.join to return each clipped separated by commas 
+var zds = urls.match(/\d{7}/g);
+
+
+for(i = 0; i < zds.length;i++) {
+      console.log(zds[i]);
+    };
