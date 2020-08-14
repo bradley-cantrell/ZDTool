@@ -8,22 +8,16 @@
 
     </header>
     <body>
-        <form id="zendeskurls">
-            <label for="userinput">URL Here:</label>
-            <input type="text" id="userinput" name="userinput">
-            <input type="button" onclick="submitForm()" value="Submit">
-        </form>
-    </body>
-
-    <script>
+       <script>
+        
         var urls = prompt("Input comma separated ZD URLs:");
         var zds = urls.match(/\d{7}/g);
+        document.write(zds);
 
-
-        for(i = 0; i < zds.length;i++) {
-            alert(zds[i]);
-            };
     </script>
+    </body>
+
+    
     <footer>
 
 
